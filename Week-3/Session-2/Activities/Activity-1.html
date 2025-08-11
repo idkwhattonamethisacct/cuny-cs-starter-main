@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Forms Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .output {
+            padding: 10px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 3px;
+            border-left: 4px solid #007acc;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Activity 1: Interactive Pet Store Form</h1>
+        
+        <h3>Your Tasks:</h3>
+        <ol>
+            <li>Make the pet name input show a welcome message as you type</li>
+            <li>Make the adoption form show confirmation when submitted</li>
+        </ol>
+        
+        <h3>Code Help:</h3>
+        <p><code>element.addEventListener('input', function() {...})</code> - Respond to typing</p>
+        <p><code>element.addEventListener('submit', function(event) {...})</code> - Handle form submit</p>
+        <p><code>event.preventDefault()</code> - Stop page reload</p>
+        <p><code>inputElement.value</code> - Get text from input</p>
+    </div>
+
+    <div class="practice-area">
+        <h2>🐕 Pet Adoption Center</h2>
+        
+        <!-- Task 1: Real-time pet welcome -->
+        <div>
+            <label>What's your pet's name?</label>
+            <input type="text" id="pet-name" placeholder="Enter your pet's name...">
+            <div id="pet-welcome" class="output">Enter a name to welcome your pet!</div>
+        </div>
+        
+        <hr style="margin: 20px 0;">
+        
+        <!-- Task 2: Adoption form -->
+        <form id="adoption-form">
+            <label>Your favorite animal:</label>
+            <input type="text" id="animal-input" placeholder="e.g., dog, cat, bird...">
+            <button type="submit">Submit Adoption Request</button>
+        </form>
+        <div id="adoption-result" class="output">Submit the form to see your adoption request!</div>
+    </div>
+
+    <script>
+        // Task 1: Real-time pet welcome
+        // TODO: Get the pet name input and welcome elements
+        const petNameInput = document.getElementById('pet-name');
+        const petWelcome = document.getElementById('pet-welcome');
+        
+        // TODO: Add input event listener to show welcome message as user types
+        // When user types, show: "Welcome [petName]! 🐾" in the welcome area
+        petNameInput.addEventListener('input', function() {
+            // Your code here
+            
+        });
+
+        // Task 2: Adoption form handling
+        // TODO: Get the form and result elements
+        const adoptionForm = document.getElementById('adoption-form');
+        const adoptionResult = document.getElementById('adoption-result');
+        
+        // TODO: Add submit event listener
+        // When form is submitted:
+        // 1. Prevent page reload with event.preventDefault()
+        // 2. Get the animal from the input
+        // 3. Show "Thank you for wanting to adopt a [animal]!" in the result area
+        adoptionForm.addEventListener('submit', function(event) {
+            // Your code here
+            
+        });
+    </script>
+</body>
+</html>

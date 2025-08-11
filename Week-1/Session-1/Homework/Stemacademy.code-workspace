@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Desktop/Stemacademy"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cuny-cs-starter-main"
+	}
+}

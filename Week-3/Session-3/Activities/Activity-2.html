@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Processing Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #005a99;
+        }
+        .output {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #007acc;
+            min-height: 40px;
+        }
+        .album-item {
+            padding: 10px;
+            margin: 8px 0;
+            background: #e8f4f8;
+            border-radius: 4px;
+            border-left: 3px solid #007acc;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Activity 2: Processing Different Data Types</h1>
+        
+        <h3>Your Tasks:</h3>
+        <ol>
+            <li>Get and display a single todo item</li>
+            <li>Get and display multiple photo albums</li>
+        </ol>
+        
+        <h3>Code Help:</h3>
+        <p><code>data.property</code> - Get a property from an object</p>
+        <p><code>array.forEach(item => {...})</code> - Loop through array items</p>
+        <p><code>console.log(data)</code> - See what data looks like</p>
+        
+        <h3>APIs to explore:</h3>
+        <p><strong>Todo:</strong> https://jsonplaceholder.typicode.com/todos/1</p>
+        <p><strong>Albums:</strong> https://jsonplaceholder.typicode.com/albums?_limit=5</p>
+    </div>
+
+    <!-- Task 1: Single Todo Item -->
+    <div class="practice-area">
+        <h2>✅ Task 1: Todo Item</h2>
+        <button id="todo-btn">Get Todo Item</button>
+        <div id="todo-display" class="output">
+            Click the button to get a todo item!
+        </div>
+    </div>
+
+    <!-- Task 2: Multiple Albums -->
+    <div class="practice-area">
+        <h2>📚 Task 2: Photo Albums</h2>
+        <button id="albums-btn">Get Albums</button>
+        <div id="albums-display" class="output">
+            Click the button to get photo albums!
+        </div>
+    </div>
+
+    <script>
+        // Task 1: Single Todo Item
+        const todoBtn = document.getElementById('todo-btn');
+        const todoDisplay = document.getElementById('todo-display');
+        
+        todoBtn.addEventListener('click', function() {
+            // TODO: Fetch todo data and display it
+            // URL: https://jsonplaceholder.typicode.com/todos/1
+            // The data has: id, title, completed, userId
+            // Show the title and whether it's completed
+            
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(response => response.json())
+                .then(data => {
+                    // TODO: Display the todo information
+                    // Use data.title and data.completed
+                    // Example: "Task: [title] - Status: [completed ? 'Done' : 'Not Done']"
+                    
+                });
+        });
+
+        // Task 2: Multiple Albums
+        const albumsBtn = document.getElementById('albums-btn');
+        const albumsDisplay = document.getElementById('albums-display');
+        
+        albumsBtn.addEventListener('click', function() {
+            // TODO: Fetch albums data and display each album
+            // URL: https://jsonplaceholder.typicode.com/albums?_limit=5
+            // This returns an array of album objects
+            // Each album has: id, title, userId
+            
+            fetch('https://jsonplaceholder.typicode.com/albums?_limit=5')
+                .then(response => response.json())
+                .then(albums => {
+                    // TODO: Clear previous results
+                    albumsDisplay.innerHTML = '<h3>Photo Albums:</h3>';
+                    
+                    // TODO: Loop through albums array
+                    // For each album, create a div and show the title
+                    // albums.forEach(album => {
+                    //   const albumDiv = document.createElement('div');
+                    //   albumDiv.className = 'album-item';
+                    //   albumDiv.textContent = album.title;
+                    //   albumsDisplay.appendChild(albumDiv);
+                    // });
+                    
+                });
+        });
+    </script>
+</body>
+</html>

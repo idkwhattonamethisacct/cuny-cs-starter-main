@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #005a99;
+        }
+        .output {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #007acc;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Activity 1: Getting Data from APIs</h1>
+        
+        <h3>Your Tasks:</h3>
+        <ol>
+            <li>Make the photo button get a random photo from an API</li>
+            <li>Make the post button get a blog post</li>
+        </ol>
+        
+        <h3>Code Help:</h3>
+        <p><code>fetch('url')</code> - Get data from an API</p>
+        <p><code>.then(response => response.json())</code> - Convert to JSON</p>
+        <p><code>.then(data => {...})</code> - Use the data</p>
+        
+        <h3>APIs to use:</h3>
+        <p><strong>Photo:</strong> https://picsum.photos/200/200</p>
+        <p><strong>Post:</strong> https://jsonplaceholder.typicode.com/posts/1</p>
+    </div>
+
+    <!-- Task 1: Random Photo -->
+    <div class="practice-area">
+        <h2>🖼️ Task 1: Random Photo</h2>
+        <button id="photo-btn">Get Random Photo</button>
+        <div id="photo-display" class="output">
+            Click the button to get a random photo!
+        </div>
+    </div>
+
+    <!-- Task 2: Blog Post -->
+    <div class="practice-area">
+        <h2>📝 Task 2: Blog Post</h2>
+        <button id="post-btn">Get Blog Post</button>
+        <div id="post-display" class="output">
+            Click the button to get a blog post!
+        </div>
+    </div>
+
+    <script>
+        // Task 1: Random Photo
+        const photoBtn = document.getElementById('photo-btn');
+        const photoDisplay = document.getElementById('photo-display');
+        
+        photoBtn.addEventListener('click', function() {
+            // TODO: Use fetch to get a random photo
+            // URL: https://picsum.photos/200/200
+            // For images, you can create an <img> element and set its src
+            
+            // Example structure:
+            // fetch('https://picsum.photos/200/200')
+            //   .then(response => {
+            //     const img = document.createElement('img');
+            //     img.src = response.url;
+            //     img.style.maxWidth = '100%';
+            //     photoDisplay.innerHTML = '';
+            //     photoDisplay.appendChild(img);
+            //   });
+        });
+
+        // Task 2: Blog Post
+        const postBtn = document.getElementById('post-btn');
+        const postDisplay = document.getElementById('post-display');
+        
+        postBtn.addEventListener('click', function() {
+            // TODO: Use fetch to get a blog post
+            // URL: https://jsonplaceholder.typicode.com/posts/1
+            // The response has 'title' and 'body' properties
+            
+            // Example structure:
+            // fetch('https://jsonplaceholder.typicode.com/posts/1')
+            //   .then(response => response.json())
+            //   .then(data => {
+            //     postDisplay.innerHTML = `
+            //       <h4>${data.title}</h4>
+            //       <p>${data.body}</p>
+            //     `;
+            //   });
+        });
+    </script>
+</body>
+</html>

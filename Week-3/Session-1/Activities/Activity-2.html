@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Elements Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .app-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .item {
+            padding: 5px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Activity 2: Create New Elements</h1>
+        
+        <h3>Your Task:</h3>
+        <p>Make the "Add Item" button work. When clicked, it should create a new paragraph with the text from the input.</p>
+        
+        <h3>Steps:</h3>
+        <ol>
+            <li>Get the text from the input</li>
+            <li>Create a new paragraph element</li>
+            <li>Set the paragraph's text</li>
+            <li>Add it to the list container</li>
+        </ol>
+        
+        <h3>Code Help:</h3>
+        <p><code>document.getElementById('text-input').value</code> - Get input text</p>
+        <p><code>document.createElement('p')</code> - Create paragraph</p>
+        <p><code>element.textContent = 'text'</code> - Set text</p>
+        <p><code>container.appendChild(element)</code> - Add to page</p>
+    </div>
+
+    <div class="app-area">
+        <h2>Simple List Maker</h2>
+        
+        <input type="text" id="text-input" placeholder="Type something..." value="My first item">
+        <button id="add-btn">Add Item</button>
+        
+        <div id="list-container">
+            <p class="item">Example item (already here)</p>
+        </div>
+    </div>
+
+    <script>
+        const addBtn = document.getElementById('add-btn');
+        const textInput = document.getElementById('text-input');
+        const listContainer = document.getElementById('list-container');
+
+        addBtn.addEventListener('click', function() {
+            // TODO: Your code here
+            // 1. Get the text from textInput.value
+            // 2. Create a new paragraph element
+            // 3. Set the paragraph's textContent to the input text
+            // 4. Add class "item" to the paragraph
+            // 5. Add the paragraph to listContainer
+            
+        });
+    </script>
+</body>
+</html>

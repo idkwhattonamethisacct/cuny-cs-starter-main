@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Data Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        form {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        input, button {
+            padding: 8px 12px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #007acc;
+        }
+        .movie-list {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+        .movie-item {
+            padding: 8px;
+            margin: 5px 0;
+            background: #e8f4f8;
+            border-radius: 3px;
+            border-left: 3px solid #007acc;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Activity 3: Movie Collection Manager</h1>
+        
+        <h3>Your Tasks:</h3>
+        <ol>
+            <li>Create a student ID card from multiple form fields</li>
+            <li>Add movies to a dynamic watchlist</li>
+        </ol>
+        
+        <h3>Code Help:</h3>
+        <p><code>document.getElementById('id').value</code> - Get form data</p>
+        <p><code>document.createElement('div')</code> - Create new element</p>
+        <p><code>element.appendChild(newElement)</code> - Add to page</p>
+        <p><code>input.value = ''</code> - Clear form field</p>
+    </div>
+
+    <!-- Task 1: Student ID Creator -->
+    <div class="practice-area">
+        <h2>Task 1: Student ID Card Creator</h2>
+        
+        <form id="student-form">
+            <input type="text" id="student-name" placeholder="Student name" required>
+            <input type="text" id="school" placeholder="School name" required>
+            <input type="text" id="grade" placeholder="Grade level" required>
+            <button type="submit">Create ID Card</button>
+        </form>
+        
+        <div id="id-card" class="result">
+            Fill out the form above to create your student ID card!
+        </div>
+    </div>
+
+    <!-- Task 2: Movie Watchlist -->
+    <div class="practice-area">
+        <h2>Task 2: Movie Watchlist</h2>
+        
+        <form id="movie-form">
+            <input type="text" id="movie-input" placeholder="Enter a movie title..." required>
+            <button type="submit">Add to Watchlist</button>
+        </form>
+        
+        <div class="movie-list" id="movie-list">
+            <p style="color: #666; font-style: italic;">No movies yet. Add your first movie above!</p>
+        </div>
+    </div>
+
+    <script>
+        // Task 1: Student ID Creator
+        const studentForm = document.getElementById('student-form');
+        const idCard = document.getElementById('id-card');
+        
+        studentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // TODO: Get values from all three form fields
+            const studentName = document.getElementById('student-name').value;
+            // Get school value
+            // Get grade value
+            
+            // TODO: Create an ID card message using template literals
+            // Show: "Student: [name] | School: [school] | Grade: [grade]"
+            idCard.textContent = `Student: ${studentName}...`; // Complete this
+        });
+
+        // Task 2: Movie Watchlist
+        const movieForm = document.getElementById('movie-form');
+        const movieInput = document.getElementById('movie-input');
+        const movieList = document.getElementById('movie-list');
+        
+        movieForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // TODO: Get the movie title from the input
+            const movieTitle = movieInput.value;
+            
+            // TODO: Create a new div element for the movie
+            const newMovie = document.createElement('div');
+            newMovie.className = 'movie-item';
+            newMovie.textContent = '🎬 ' + movieTitle;
+            
+            // TODO: Add the new movie to the movie list
+            // Use appendChild to add newMovie to movieList
+            
+            // TODO: Clear the input field
+            movieInput.value = '';
+        });
+    </script>
+</body>
+</html>

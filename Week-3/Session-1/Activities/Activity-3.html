@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .color-button {
+            padding: 15px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+        .red { background-color: #ff6b6b; }
+        .blue { background-color: #4dabf7; }
+        .green { background-color: #51cf66; }
+        .info-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Activity 3: Button Events</h1>
+        
+        <h3>Your Task:</h3>
+        <p>Make the buttons below show information when clicked.</p>
+        
+        <h3>Steps:</h3>
+        <ol>
+            <li>Add click event listeners to each button</li>
+            <li>When clicked, show the button's color in the info box</li>
+            <li>Try the example code first, then add the other buttons</li>
+        </ol>
+        
+        <h3>Code Help:</h3>
+        <p><code>button.addEventListener('click', function() {...})</code> - Add click event</p>
+        <p><code>document.getElementById('info').textContent = 'text'</code> - Update info</p>
+    </div>
+
+    <div class="practice-area">
+        <h2>Click the Buttons</h2>
+        
+        <button id="red-btn" class="color-button red">Red Button</button>
+        <button id="blue-btn" class="color-button blue">Blue Button</button>
+        <button id="green-btn" class="color-button green">Green Button</button>
+        
+        <div class="info-box" id="info">
+            Click a button to see its information here.
+        </div>
+    </div>
+
+    <script>
+        // Get references to elements
+        const redBtn = document.getElementById('red-btn');
+        const blueBtn = document.getElementById('blue-btn');
+        const greenBtn = document.getElementById('green-btn');
+        const infoBox = document.getElementById('info');
+
+        // Example: Red button click event
+        redBtn.addEventListener('click', function() {
+            infoBox.textContent = 'You clicked the RED button!';
+        });
+
+        // TODO: Add click event for blue button
+        // When clicked, show "You clicked the BLUE button!"
+        
+
+        // TODO: Add click event for green button  
+        // When clicked, show "You clicked the GREEN button!"
+        
+
+    </script>
+</body>
+</html>

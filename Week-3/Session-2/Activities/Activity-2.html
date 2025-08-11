@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .message {
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .error {
+            background: #ffe6e6;
+            color: #cc0000;
+        }
+
+        .success {
+            background: #e6ffe6;
+            color: #008800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="instructions">
+        <h1>Activity 2: Game Account Validation</h1>
+
+        <h3>Your Tasks:</h3>
+        <ol>
+            <li>Validate player name length (minimum 4 characters)</li>
+            <li>Check that phone number contains dashes</li>
+        </ol>
+
+        <h3>Code Help:</h3>
+        <p><code>text.length</code> - Get length of text</p>
+        <p><code>text.includes('-')</code> - Check if text contains -</p>
+        <p><code>if (condition) {...} else {...}</code> - Show different messages</p>
+    </div>
+
+    <div class="practice-area">
+        <h2>🎮 Create Gaming Account</h2>
+
+        <div class="form-group">
+            <label for="player-name">Player Name:</label>
+            <input type="text" id="player-name" placeholder="Enter player name (min 4 characters)">
+            <div id="name-message" class="message">Choose your player name</div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter phone with dashes (xxx-xxx-xxxx)">
+            <div id="phone-message" class="message">Enter your phone number</div>
+        </div>
+    </div>
+
+    <script>
+        // Task 1: Player name validation
+        const playerNameInput = document.getElementById('player-name');
+        const nameMessage = document.getElementById('name-message');
+
+        playerNameInput.addEventListener('input', function () {
+            const playerName = playerNameInput.value;
+
+            // TODO: Check if player name is at least 4 characters long
+            // If too short: show error message and add 'error' class
+            // If good: show success message and add 'success' class
+
+            if (playerName.length < 4) {
+                // Your error code here
+
+            } else {
+                // Your success code here
+
+            }
+        });
+
+        // Task 2: Phone validation
+        const phoneInput = document.getElementById('phone');
+        const phoneMessage = document.getElementById('phone-message');
+
+        phoneInput.addEventListener('input', function () {
+            const phone = phoneInput.value;
+
+            // TODO: Check if phone contains dash (-) symbol
+            // If no dash: show error message and add 'error' class
+            // If has dash: show success message and add 'success' class
+
+            if (phone.includes('-')) {
+                // Your success code here
+
+            } else {
+                // Your error code here
+
+            }
+        });
+    </script>
+</body>
+
+</html>

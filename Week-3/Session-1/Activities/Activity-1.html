@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selection Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .practice-area {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .special {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="instructions">
+        <h1>Activity 1: Select and Change Elements</h1>
+
+        <h3>Your Tasks:</h3>
+        <ol>
+            <li>Open browser console (F12)</li>
+            <li>Try these commands one by one:</li>
+        </ol>
+
+        <p><strong>Step 1:</strong> Change the title<br>
+            <code>document.getElementById('title').textContent = 'I did it!'</code>
+        </p>
+
+        <p><strong>Step 2:</strong> Make first paragraph red<br>
+            <code>document.querySelector('p').style.color = 'red'</code>
+        </p>
+
+        <p><strong>Step 3:</strong> Make special text bold<br>
+            <code>document.querySelector('.special').style.fontWeight = 'bold'</code>
+        </p>
+    </div>
+
+    <div class="practice-area">
+        <h1 id="title">Original Title</h1>
+
+        <p>This is the first paragraph.</p>
+
+        <p>This is the second paragraph.</p>
+
+        <div class="special">This text has the "special" class.</div>
+
+        <img id="photo" src="https://via.placeholder.com/150" alt="Test image">
+    </div>
+
+    <!-- Your JavaScript goes here -->
+    <script>
+        // Copy your working code from the console here
+
+    </script>
+</body>
+
+</html>
