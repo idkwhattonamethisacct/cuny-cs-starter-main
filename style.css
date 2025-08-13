@@ -22,7 +22,7 @@ h1 {
     margin: 0;
     letter-spacing: 2px;
     font-family: 'Press Start 2P', monospace;
-    text-shadow: 0 0 8px #121b18, 0 0 16px #00ff9944;
+    text-shadow: 0 0 8px #00ff99, 0 0 16px #00ff9944;
 }
 
 h2 {
@@ -59,7 +59,7 @@ h3 {
 }
 
 p {
-    background: transparent;
+    background: none;
     color: #e0ffe0;
     line-height: 1.7;
     margin: 0.5rem 0 1.2rem 0;
